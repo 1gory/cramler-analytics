@@ -1,0 +1,3 @@
+User-Agent: *
+Host: https://cramler.ru/
+Sitemap: https://cramler.ru/sitemap.xml
