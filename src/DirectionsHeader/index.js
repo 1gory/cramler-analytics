@@ -5,13 +5,15 @@ import Br from '../Elements/Br';
 
 const Wrapper = styled.div`
   text-align: center;
+  padding-top: 20px;
+  padding-bottom: 60px;
 `;
 
 export default () => (
   <Wrapper>
     <H2>
-      Мы сделаем анализ вашего сайта,<Br />
-      чтобы понять где вы теряете клиентов<Br />
+      Мы проанализируем ваш сайт,<Br />
+      чтобы понять, где вы теряете клиентов<Br />
       по следующим направленям:
     </H2>
   </Wrapper>

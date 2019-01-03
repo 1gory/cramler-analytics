@@ -122,8 +122,8 @@ export default () => (
     </Requisites>
 
     <SocialNetworksIcons>
-      <a href="https://vk.com/lazernaya__rezka" target="_blank">
-        <Icon src={vkIcon} alt="nagravirovku vkontakte" onClick={() => (yaCounter48967208.reachGoal('vk'))} />
+      <a href="https://vk.com/id14662245" target="_blank">
+        <Icon src={vkIcon} alt="nagravirovku vkontakte" onClick={() => (ym(51779426, 'reachGoal', 'vk'))} />
       </a>
       {/*<a href="https://instagram.com/casp_lase/" target="_blank">*/}
         {/*<Icon src={instagramIcon} alt="nagravirovku instagram" onClick={() => (yaCounter48967208.reachGoal('instagram'))} />*/}
@@ -131,8 +131,8 @@ export default () => (
       {/*<a href="https://www.youtube.com/channel/UC2-rv4pDPmTUdjvl5GUBJsA" target="_blank">*/}
         {/*<Icon src={youtubeIcon} alt="Casp Lase YouTube" onClick={() => (yaCounter48967208.reachGoal('youtube'))} />*/}
       {/*</a>*/}
-      <a href="tg://resolve?domain=andrew1322" target="_blank">
-        <Icon src={telegramIcon} alt="nagravirovku telegram" />
+      <a href="tg://resolve?domain=igoryp" target="_blank">
+        <Icon src={telegramIcon} alt="nagravirovku telegram" onClick={() => (ym(51779426, 'reachGoal', 'telegram'))} />
       </a>
     </SocialNetworksIcons>
   </Wrapper>

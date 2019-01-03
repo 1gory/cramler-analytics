@@ -119,19 +119,21 @@ export default () => (
           label="Email"
           info="info@cramler.ru"
           href="mailto:info@cramler.ru"
-          onClick={() => (yaCounter48967208.reachGoal('mail'))}
+          onClick={() => (ym(51779426, 'reachGoal', 'email'))}
         />
         <Contact
           icon={contactsPhone}
           label="Телефон для связи"
           info="+7 (916) 228-24-56"
           href="tel:+79162282456"
+          onClick={() => (ym(51779426, 'reachGoal', 'phone'))}
         />
         <Contact
           icon={contactsMessenger}
           label="WhatsApp, Telegram"
           info="+7 (916) 228-24-56"
           href="whatsapp://send?text=Здравствуйте!&phone=+79162282456"
+          onClick={() => (ym(51779426, 'reachGoal', 'whatsapp'))}
         />
       </Contacts>
       <LeaveMessageButton onClick={handleClick}>Оставьте заявку</LeaveMessageButton>

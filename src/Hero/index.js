@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import H2 from './../Elements/H2';
 import H1 from './../Elements/H1';
 import Br from './../Elements/Br';
-import bg from './background.jpg';
-import bgMin from './background-min.jpg';
+import bg from './bg.jpg';
+import Button from './../Elements/CtaButton';
 
 const Offer = styled.span`
   color: #fff;
@@ -20,16 +20,16 @@ const Offer = styled.span`
 const OfferText = styled(Offer)`
   padding-top: 120px;
   padding-bottom: 40px;
+  font-weight: lighter;
 `;
 
 const SubOfferText = styled(Offer)`
-  
+  font-weight: lighter;
 `;
 
 const Wrapper = styled.div`
   background: #FFF;
   background-size: cover;
-  background-image: url(${bgMin});  
   
   @media (min-width: 768px) {
     background-image: url(${bg});  
@@ -47,28 +47,6 @@ const Background = styled.div`
 const ButtonWrapper = styled.div`
   margin: 0 auto;
   width: 320px;
-`;
-
-const Button = styled.button`
-  width: 100%;
-  padding: 10px 40px;
-  color:#ffffff;
-  border: none;
-  border-radius: 24px;
-  font-size: 20px;
-  font-family: 'Roboto',sans-serif;
-  cursor: pointer;
-  
-  // Change the color to separate the buttons
-  background-color:#08b56d;
-  
-  &:hover {
-    background-color: #1ba069;
-  }
-  
-  @media (min-width: 768px) {
-    background-color:#08b56d;
-  }
 `;
 
 export default class extends Component {

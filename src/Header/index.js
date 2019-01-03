@@ -77,10 +77,10 @@ export default () => (
           </H1>
         </HeaderWrapper>
         <Contacts>
-          <Phone href="tel:+79162282456" onClick={() => (console.log())}>
+          <Phone href="tel:+79162282456" onClick={() => (ym(51779426, 'reachGoal', 'phone'))}>
             +7(916)228-24-56
           </Phone>
-          <Mail href="mailto:info@cramler.ru" onClick={() => (console.log())}>
+          <Mail href="mailto:info@cramler.ru" onClick={() => (ym(51779426, 'reachGoal', 'email'))}>
             info@cramler.ru
           </Mail>
         </Contacts>

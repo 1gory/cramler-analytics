@@ -1,19 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import H2 from '../../Elements/H2';
 
 const Wrapper = styled.div`
   text-align: center;
   padding: 20px 40px;
 `;
 
-const H2 = styled.h2`
-  font-family: 'Roboto', sans-serif;
-  font-size: 24px;
-  color: #000;
-`;
-
 const Description = styled.p`
-  font-family: 'Roboto-Light', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: #3b3b3b;
   

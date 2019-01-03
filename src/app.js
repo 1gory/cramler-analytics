@@ -26,6 +26,14 @@ export default class extends Component {
     this.state = {
       mapPreloader: true,
     };
+
+    this.handleWaypointEnter = this.handleWaypointEnter.bind(this);
+  }
+
+  handleWaypointEnter() {
+    this.setState({
+      mapPreloader: false,
+    });
   }
 
   render() {
@@ -41,7 +49,7 @@ export default class extends Component {
       <Support />
       <Payment />
       <Checklist />
-      <About />
+      <About handleScroll={this.handleWaypointEnter} />
       <Footer mapPreloader={this.state.mapPreloader} />
     </Wrapper>
   }
