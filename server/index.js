@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
     const sheet = new ServerStyleSheet();
 
     const url = req.url;
-
+    const context = {};
     const markup = renderToString(
       <StyleSheetManager sheet={sheet.instance}>
         <StaticRouter location={url} context={context}>
