@@ -94,7 +94,11 @@ const Mail = styled.a`
 `;
 
 const Substrate = styled.div`
-  height: 60px;
+  height: 24px;
+  
+  @media(min-width: 768px) {
+    height: 60px;
+  }
 `;
 
 const Icon = styled.img`
@@ -130,8 +134,12 @@ export default () => (
           <Mail href="mailto:info@cramler.ru" onClick={() => (ym(51779426, 'reachGoal', 'email'))}>
             info@cramler.ru
           </Mail>
-          <PhoneIcon src={phoneIcon} />
-          <MailIcon src={mailIcon} />
+          <a href="tel:+79162282456" onClick={() => (ym(51779426, 'reachGoal', 'phone'))}>
+            <PhoneIcon src={phoneIcon} />
+          </a>
+          <a href="mailto:info@cramler.ru" onClick={() => (ym(51779426, 'reachGoal', 'email'))}>
+            <MailIcon src={mailIcon} />
+          </a>
         </Contacts>
       </Menu>
     </Wrapper>

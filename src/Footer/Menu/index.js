@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Scroll from 'react-scroll';
-import instagramIcon from '../Social/contact-social-insta.svg';
 import vkIcon from '../Social/contact-social-vk.svg';
 import telegramIcon from '../Social/contact-social-telegram.svg';
+import instagramIcon from '../Social/contact-social-insta.svg';
 import youtubeIcon from '../Social/contact-social-youtube.svg';
 import visa from '../Payments/visa.svg';
 import maestro from '../Payments/maestro.svg';
@@ -123,16 +123,16 @@ export default () => (
 
     <SocialNetworksIcons>
       <a href="https://vk.com/id14662245" target="_blank">
-        <Icon src={vkIcon} alt="nagravirovku vkontakte" onClick={() => (ym(51779426, 'reachGoal', 'vk'))} />
+        <Icon src={vkIcon} alt="cramler vkontakte" onClick={() => (ym(51779426, 'reachGoal', 'vk'))} />
       </a>
       {/*<a href="https://instagram.com/casp_lase/" target="_blank">*/}
-        {/*<Icon src={instagramIcon} alt="nagravirovku instagram" onClick={() => (yaCounter48967208.reachGoal('instagram'))} />*/}
+        {/*<Icon src={instagramIcon} alt="instagram" onClick={() => (yaCounter48967208.reachGoal('instagram'))} />*/}
       {/*</a>*/}
       {/*<a href="https://www.youtube.com/channel/UC2-rv4pDPmTUdjvl5GUBJsA" target="_blank">*/}
-        {/*<Icon src={youtubeIcon} alt="Casp Lase YouTube" onClick={() => (yaCounter48967208.reachGoal('youtube'))} />*/}
+        {/*<Icon src={youtubeIcon} alt="YouTube" onClick={() => (yaCounter48967208.reachGoal('youtube'))} />*/}
       {/*</a>*/}
       <a href="tg://resolve?domain=igoryp" target="_blank">
-        <Icon src={telegramIcon} alt="nagravirovku telegram" onClick={() => (ym(51779426, 'reachGoal', 'telegram'))} />
+        <Icon src={telegramIcon} alt="cramler telegram" onClick={() => (ym(51779426, 'reachGoal', 'telegram'))} />
       </a>
     </SocialNetworksIcons>
   </Wrapper>

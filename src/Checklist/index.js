@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import StyledH2 from '../Elements/H2';
 import StyledButton from '../Elements/CtaButton';
-import Input from '../Elements/Input';
-import Br from '../Elements/Br';
+import StyledInput from '../Elements/Input';
 
 const Wrapper = styled.div`
   background-color: #3b3b3b;
@@ -22,7 +21,7 @@ const Form = styled.form`
   align-items: center;
   margin: 0 auto;
   padding: 20px 0;
-  max-width: 500px;
+  max-width: 600px;
   
   @media(max-width: 768px) {
     flex-direction: column;
@@ -38,12 +37,23 @@ const H2 = styled(StyledH2)`
   font-weight: lighter;
 `;
 
+const Input = styled(StyledInput)`
+  width: 260px;
+  flex-direction: column;
+  margin-bottom: 15px;
+  
+  @media(min-width: 768px) {
+    margin-bottom: 0;
+    flex-direction: row;
+  }
+`;
+
 export default class extends Component {
   render() {
     return <Wrapper>
       <CheckListFormWrapper>
         <H2>
-          Оставьте свой Email<Br />
+          <b>Оставьте свой Email<br /></b>
           Мы отправим бесплатный чек-лист по оптимизации вашего сайта
         </H2>
         <Form>

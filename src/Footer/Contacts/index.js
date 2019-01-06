@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Scroll from 'react-scroll';
+import Button from '../../Elements/CtaButton';
 import contactsEmail from './contact-email.svg';
 import contactsPhone from './contact-phone.svg';
 import contactsMessenger from './contact-messengers.svg';
@@ -40,7 +41,6 @@ const Contacts = styled.div`
 `;
 
 const ContactWrapper = styled.div`
-  // width: 175px;
   display: flex;
   align-items: center;
   padding: 10px;
@@ -65,18 +65,8 @@ const Info = styled.a`
   color: #ffffff;
 `;
 
-const LeaveMessageButton = styled.button`
-  background-color: #d92518;
-  cursor: pointer;
-  border: solid 1px #272727;
-  border-radius: 20px;
-  font-family: 'Roboto-Light', sans-serif;
+const LeaveMessageButton = styled(Button)`
   font-size: 16px;
-  padding: 10px 25px;
-  color: #fff
-  
-  margin: 15px;
-  
 `;
 
 const Logo = styled.img`
@@ -137,7 +127,7 @@ export default () => (
           onClick={() => (ym(51779426, 'reachGoal', 'whatsapp'))}
         />
       </Contacts>
-      <LeaveMessageButton onClick={handleClick}>Оставьте заявку</LeaveMessageButton>
+      <LeaveMessageButton onClick={handleClick}>Оставить заявку</LeaveMessageButton>
     </ContactsWrapper>
   </Wrapper>
 );
