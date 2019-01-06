@@ -3,6 +3,8 @@ import bodyParser from 'body-parser';
 import express from 'express';
 import compression from 'compression';
 import { renderToString } from 'react-dom/server';
+import { StaticRouter } from 'react-router-dom';
+import { CookiesProvider } from 'react-cookie';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 import fs from 'fs';
 import path from 'path';
@@ -19,6 +21,7 @@ app.use(bodyParser.json());
 
 app.use(express.static(path.resolve(__dirname, '..', 'uploads')));
 
+
 app.use('/api', api);
 
 app.get('/', (req, res) => {
@@ -32,9 +35,15 @@ app.get('/', (req, res) => {
 
     const sheet = new ServerStyleSheet();
 
+    const url = req.url;
+
     const markup = renderToString(
       <StyleSheetManager sheet={sheet.instance}>
-          <App />
+        <StaticRouter location={url} context={context}>
+          <CookiesProvider cookies={req.universalCookies}>
+            <App />
+          </CookiesProvider>
+        </StaticRouter>
       </StyleSheetManager>,
     );
 
