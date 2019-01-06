@@ -99,14 +99,16 @@ const Substrate = styled.div`
 
 const Icon = styled.img`
   width: 28px;
-  padding-right: 10px;
   
   @media(min-width: 768px) {
     display: none;
   }
 `;
 
-const PhoneIcon = styled(Icon)``;
+const PhoneIcon = styled(Icon)`
+  padding-right: 10px;
+`;
+
 const MailIcon = styled(Icon)``;
 
 export default () => (

@@ -4,6 +4,7 @@ import H2 from './../Elements/H2';
 import H1 from './../Elements/H1';
 import Br from './../Elements/Br';
 import bg from './bg.jpg';
+import bgMin from './bg-min.jpg';
 import Button from './../Elements/CtaButton';
 
 const Offer = styled.span`
@@ -30,6 +31,7 @@ const SubOfferText = styled(Offer)`
 const Wrapper = styled.div`
   background: #FFF;
   background-size: cover;
+  background-image: url(${bgMin});  
   
   @media (min-width: 768px) {
     background-image: url(${bg});  
