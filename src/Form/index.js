@@ -11,6 +11,10 @@ const Wrapper = styled.div`
   margin: 0 auto;
   text-align: center;
   padding: 40px 0;
+  
+  @media(max-width: 768px) {
+    padding: 0 20px;
+  }
 `;
 
 const Form = styled.form`
@@ -35,6 +39,10 @@ const FormWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  @media(max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const Input = styled(StyledInput)`

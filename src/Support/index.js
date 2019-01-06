@@ -10,6 +10,10 @@ const Wrapper = styled.div`
 const SupportText = styled.div`
   text-align: left;
   padding-top: 30px;
+  
+  @media(max-width: 768px) {
+    padding: 0 20px;
+  }
 `;
 
 const SupportSection = styled.div`

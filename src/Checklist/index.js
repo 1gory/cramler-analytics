@@ -23,6 +23,10 @@ const Form = styled.form`
   margin: 0 auto;
   padding: 20px 0;
   max-width: 500px;
+  
+  @media(max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const Button = styled(StyledButton)`

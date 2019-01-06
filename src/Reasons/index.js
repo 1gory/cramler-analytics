@@ -11,7 +11,7 @@ const Point3 = <span>Ваш сайт не находят <Br />в google и yand
 
 export default () => (
   <Points
-    name="Оставьте заявку"
+    name="Зачем"
     subheader="Каждый день вы теряете клиентов, если:"
     point1={Point1}
     point2={Point2}

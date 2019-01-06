@@ -10,15 +10,24 @@ const Wrapper = styled.div`
 
 const ReasonsWrapper = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 768px;
+  
+  @media(max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const Reason = styled.div`
   width: 230px;
   padding: 50px 0;
   text-align: center;
+  
+  @media(max-width: 768px) {
+    padding: 20px 0;
+  }
 
   &:hover img {
     padding: 0;
@@ -30,6 +39,10 @@ const ReasonText = styled.span`
   padding: 20px 0;
   display: inline-block;
   font-size: 18px;
+  
+  @media(max-width: 768px) {
+    padding: 10px 0 20px 0;
+  }
 `;
 
 const Img = styled.img`

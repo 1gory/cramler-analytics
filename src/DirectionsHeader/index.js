@@ -7,6 +7,10 @@ const Wrapper = styled.div`
   text-align: center;
   padding-top: 20px;
   padding-bottom: 60px;
+  
+  @media(max-width: 768px){
+    padding: 0 20px;
+  }
 `;
 
 export default () => (
