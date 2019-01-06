@@ -40,7 +40,7 @@ export default class extends Component {
       <CheckListFormWrapper>
         <H2>
           Оставьте свой Email<Br />
-          Мы вышлем бесплатный чек-лист по оптимизации вашего сайта
+          Мы отправим бесплатный чек-лист по оптимизации вашего сайта
         </H2>
         <Form>
           <Input placeholder="Ваш email" />

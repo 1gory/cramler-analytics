@@ -1,6 +1,7 @@
 /* eslint react/prop-types: 0 */
 
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Scroll from 'react-scroll';
 import contactsEmail from './contact-email.svg';
@@ -113,7 +114,7 @@ export default () => (
   <Wrapper>
     <ContactsWrapper>
       <Contacts>
-        <a href="/"><Logo src={ logowhite} /></a>
+        <Link to="/"><Logo src={ logowhite} /></Link>
         <Contact
           icon={contactsEmail}
           label="Email"

@@ -1,0 +1,13 @@
+.stroke {
+    stroke-width: 2px;
+    stroke-dasharray: 0px 400px;
+    stroke-dashoffset: -100px;
+    transition: all 0.1s ease-out 0s;
+}
+
+.stroke-container:hover .stroke {
+    stroke-linecap: round;
+    stroke: #000;
+    stroke-dasharray: 200px 400px;
+    stroke-dashoffset: -1px;
+}

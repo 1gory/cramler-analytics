@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import H2 from '../Elements/H2';
+import H2 from '../H2';
+import './style.css';
 
 const Wrapper = styled.div`
   text-align: center;
@@ -16,8 +17,13 @@ const ReasonsWrapper = styled.div`
 
 const Reason = styled.div`
   width: 230px;
-  padding: 25px 0;
+  padding: 50px 0;
   text-align: center;
+
+  &:hover img {
+    padding: 0;
+    width: 50px;
+  }
 `;
 
 const ReasonText = styled.span`
@@ -27,9 +33,11 @@ const ReasonText = styled.span`
 `;
 
 const Img = styled.img`
-  width: 100px;
+  width: 40px;
+  padding: 5px 0
   margin: 0 auto;
   display: block;
+  transition: all 0.1s ease-out 0s;
 `;
 
 const SubHeader = styled.span`
@@ -37,23 +45,31 @@ const SubHeader = styled.span`
   padding: 20px 0
 `;
 
+const stroke = <svg width="202" height="2" xmlns="http://www.w3.org/2000/svg">
+  <line x1="0" y1="0" x2="200" y2="0" className="stroke" stroke="#000000" />
+</svg>;
+
 export default ({name, subheader, point1, point2, point3, img1, img2, img3, smWidth}) => (
   <Wrapper>
     <H2>{name}</H2>
     {subheader && <SubHeader>{subheader}</SubHeader>}
     <ReasonsWrapper>
-      <Reason>
-        <Img src={img1} smWidth={smWidth} />
+      <Reason className="stroke-container">
+        <Img src={img1} />
         <ReasonText>{point1}</ReasonText>
+        {stroke}
       </Reason>
-      <Reason>
-        <Img src={img2} smWidth={smWidth} />
+      <Reason className="stroke-container">
+        <Img src={img2} />
         <ReasonText>{point2}</ReasonText>
+        {stroke}
       </Reason>
-      <Reason>
-        <Img src={img3} smWidth={smWidth} />
+      <Reason className="stroke-container">
+        <Img src={img3} />
         <ReasonText>{point3}</ReasonText>
+        {stroke}
       </Reason>
     </ReasonsWrapper>
   </Wrapper>
 );
+
