@@ -28,14 +28,16 @@ const Bold = styled.span`
 `;
 
 export default ({handleScroll}) => (
-  <Wrapper>
-    <Waypoint onEnter={handleScroll}/>
+  <div>
     <AboutAnchor name="AboutAnchor"/>
-    <Header>О компании</Header>
-    <TextAbout>
-      <Bold>Cramler</Bold> - аналитическое агенство. <Br />
-      Мы занимаемся анализом сайтов для поиска проблемных мест, которые
-      мешают посетителям совершать целевые действия, а владельцам получать прибыль.
-    </TextAbout>
-  </Wrapper>
+    <Wrapper>
+      <Waypoint onEnter={handleScroll}/>
+      <Header>О компании</Header>
+      <TextAbout>
+        <Bold>Cramler</Bold> - аналитическое агенство. <Br />
+        Мы занимаемся анализом сайтов для поиска проблемных мест, которые
+        мешают посетителям совершать целевые действия, а владельцам получать прибыль.
+      </TextAbout>
+    </Wrapper>
+  </div>
 );

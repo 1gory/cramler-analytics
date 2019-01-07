@@ -99,9 +99,8 @@ export default () => (
   <Wrapper>
     <MenuWrapper>
       <FooterMenu>
-        <MenuLink onClick={() => (handleClick('MaterialsAnchor'))}>Материалы</MenuLink>
-        <MenuLink onClick={() => (handleClick('PriceAnchor'))}>Цены</MenuLink>
-        <MenuLink onClick={() => (handleClick('GalleryAnchor'))}>Галерея</MenuLink>
+        <MenuLink onClick={() => (handleClick('ProductAnchor'))}>Продукт</MenuLink>
+        <MenuLink onClick={() => (handleClick('PaymentAnchor'))}>Оплата</MenuLink>
         <MenuLink onClick={() => (handleClick('AboutAnchor'))}>О компании</MenuLink>
       </FooterMenu>
       <PaymentIcons>

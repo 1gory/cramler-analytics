@@ -1,7 +1,10 @@
 import React from 'react';
+import Scroll from 'react-scroll'
 import styled from 'styled-components';
 import H2 from '../Elements/H2';
 import Br from '../Elements/Br';
+
+const ProductAnchor = Scroll.Element;
 
 const Wrapper = styled.div`
   text-align: center;
@@ -15,6 +18,8 @@ const Wrapper = styled.div`
 `;
 
 export default () => (
+<div>
+  <ProductAnchor name="ProductAnchor" />
   <Wrapper>
     <H2>
       Мы проанализируем ваш сайт, <Br />
@@ -22,4 +27,5 @@ export default () => (
       по следующим направленям:
     </H2>
   </Wrapper>
+</div>
 );
