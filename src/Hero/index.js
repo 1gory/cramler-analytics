@@ -50,7 +50,6 @@ const ButtonWrapper = styled.div`
   
   @media (min-width: 768px) {
     padding-top: 60px;
-    font-size: 18px;
   }
 `;
 
