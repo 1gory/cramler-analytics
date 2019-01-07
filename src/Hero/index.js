@@ -32,7 +32,6 @@ const Offer = styled.span`
 
 const OfferText = styled(Offer)`
   padding-bottom: 40px;
-  // font-weight: lighter;
 `;
 
 const SubOfferText = styled(Offer)`
@@ -47,11 +46,11 @@ const SubOfferText = styled(Offer)`
 const ButtonWrapper = styled.div`
   margin: 0 auto;
   text-align: center;
-  width: 320px;
   padding-top: 30px;
   
   @media (min-width: 768px) {
     padding-top: 60px;
+    font-size: 18px
   }
 `;
 
