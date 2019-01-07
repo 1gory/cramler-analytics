@@ -8,8 +8,8 @@ import Br from './../Elements/Br';
 const AboutAnchor = Scroll.Element;
 
 const Wrapper = styled.div`
-  background: #f3f3f3;
-  padding: 30px 0;
+  padding-top: 120px;
+  padding-bottom: 30px;
 `;
 
 const Header = styled(H2)`
@@ -23,15 +23,19 @@ const TextAbout = styled.p`
   font-size: 16px;
 `;
 
-export default ({ handleScroll }) => (
+const Bold = styled.span`
+  font-weight: bolder;
+`;
+
+export default ({handleScroll}) => (
   <Wrapper>
-    <Waypoint onEnter={handleScroll} />
-    <AboutAnchor name="AboutAnchor" />
+    <Waypoint onEnter={handleScroll}/>
+    <AboutAnchor name="AboutAnchor"/>
     <Header>О компании</Header>
     <TextAbout>
-        <b>Cramler</b> - аналитическое агенство. <Br />
-        Мы занимаемся анализом сайтов для поиска проблемных мест, которые
-        мешают посетителям совершать целевые действия, а владельцам получать прибыль.
+      <Bold>Cramler</Bold> - аналитическое агенство. <Br />
+      Мы занимаемся анализом сайтов для поиска проблемных мест, которые
+      мешают посетителям совершать целевые действия, а владельцам получать прибыль.
     </TextAbout>
-    </Wrapper>
+  </Wrapper>
 );

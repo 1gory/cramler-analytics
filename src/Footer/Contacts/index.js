@@ -67,6 +67,7 @@ const Info = styled.a`
 
 const LeaveMessageButton = styled(Button)`
   font-size: 16px;
+  margin: 10px;
 `;
 
 const Logo = styled.img`

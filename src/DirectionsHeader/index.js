@@ -5,11 +5,12 @@ import Br from '../Elements/Br';
 
 const Wrapper = styled.div`
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 60px;
+  padding: 120px;
+  padding-bottom: 40px;
+  background-color: #f9f9f9;
   
   @media(max-width: 768px){
-    padding: 0 20px;
+    padding: 60px 20px 20px 20px;
   }
 `;
 

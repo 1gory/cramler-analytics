@@ -6,6 +6,6 @@ export default styled.h3`
   font-family: 'Roboto-Light',sans-serif;
  
   @media (min-width: 768px) {
-    font-size: 24px;
+    font-size: 22px;
   }
 `;

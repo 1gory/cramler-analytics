@@ -5,6 +5,7 @@ import H2 from '../../Elements/H2';
 const Wrapper = styled.div`
   text-align: center;
   padding: 20px 40px;
+  padding-bottom: 60px;
 `;
 
 const Description = styled.p`

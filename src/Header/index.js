@@ -94,7 +94,7 @@ const Mail = styled.a`
 `;
 
 const Substrate = styled.div`
-  height: 24px;
+  height: 40px;
   
   @media(min-width: 768px) {
     height: 60px;

@@ -5,7 +5,11 @@ import './style.css';
 
 const Wrapper = styled.div`
   text-align: center;
-  padding: 60px 0;
+  padding: 120px 0;
+  
+  @media(max-width: 768px) {
+    padding: 60px 0;
+  }
 `;
 
 const ReasonsWrapper = styled.div`
@@ -22,7 +26,7 @@ const ReasonsWrapper = styled.div`
 
 const Reason = styled.div`
   width: 230px;
-  padding: 50px 0;
+  padding-top: 50px;
   text-align: center;
   
   @media(max-width: 768px) {
@@ -30,8 +34,9 @@ const Reason = styled.div`
   }
 
   &:hover img {
-    padding: 0;
+    // padding: 0;
     width: 50px;
+    height: 50px;
   }
 `;
 
@@ -47,15 +52,22 @@ const ReasonText = styled.span`
 
 const Img = styled.img`
   width: 40px;
-  padding: 5px 0
+  height: 40px;
   margin: 0 auto;
   display: block;
   transition: all 0.1s ease-out 0s;
 `;
 
+const ImgWrapper = styled.div`
+  height: 60px;
+  display: flex;
+  align-items: center;
+`;
+
 const SubHeader = styled.span`
   display: inline-block;
-  padding: 20px 0
+  padding: 20px 0;
+  font-size: 18px;
 `;
 
 const stroke = <svg width="202" height="2" xmlns="http://www.w3.org/2000/svg">
@@ -68,17 +80,23 @@ export default ({name, subheader, point1, point2, point3, img1, img2, img3, smWi
     {subheader && <SubHeader>{subheader}</SubHeader>}
     <ReasonsWrapper>
       <Reason className="stroke-container">
-        <Img src={img1} />
+        <ImgWrapper>
+          <Img src={img1} />
+        </ImgWrapper>
         <ReasonText>{point1}</ReasonText>
         {stroke}
       </Reason>
       <Reason className="stroke-container">
-        <Img src={img2} />
+        <ImgWrapper>
+          <Img src={img2} />
+        </ImgWrapper>
         <ReasonText>{point2}</ReasonText>
         {stroke}
       </Reason>
       <Reason className="stroke-container">
-        <Img src={img3} />
+        <ImgWrapper>
+          <Img src={img3} />
+        </ImgWrapper>
         <ReasonText>{point3}</ReasonText>
         {stroke}
       </Reason>

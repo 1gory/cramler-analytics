@@ -19,36 +19,39 @@ const Offer = styled.span`
 `;
 
 const OfferText = styled(Offer)`
-  padding-top: 120px;
   padding-bottom: 40px;
-  font-weight: lighter;
+  // font-weight: lighter;
 `;
 
 const SubOfferText = styled(Offer)`
   font-weight: lighter;
+  font-size: 18px;
+  
+  @media (min-width: 768px) {
+    font-size: 22px;  
+  }
 `;
 
 const Wrapper = styled.div`
   background: #FFF;
   background-size: cover;
-  background-image: url(${bgMin});  
+  background-image: url(${bgMin});
+  padding: 60px 0;
   
   @media (min-width: 768px) {
+    padding: 120px 0;
     background-image: url(${bg});  
-  }
-`;
-
-const Background = styled.div`
-  padding: 30px 0;
-  
-  @media (min-width: 768px) {
-    padding: 60px 0;
   }
 `;
 
 const ButtonWrapper = styled.div`
   margin: 0 auto;
   width: 320px;
+  padding-top: 30px;
+  
+  @media (min-width: 768px) {
+    padding-top: 60px;
+  }
 `;
 
 export default class extends Component {
@@ -94,14 +97,12 @@ export default class extends Component {
           Проведем аудит вашего сайта / лендинга <Br />более чем по 100 факторам за 4 дня
         </OfferText>
         <SubOfferText as={H2}>
-          Выявим ошибки в интерфейсах, навигации и контенте, <Br />
-          которые мешают посетителям увеличивать вашу прибыль
+          Найдем ошибки в навигации и интерфейсах, <Br />
+          мешающие посетителям увеличивать вашу прибыль
         </SubOfferText>
-        <Background>
-          <ButtonWrapper>
-            <Button onClick={this.handleClick}>Оставить заявку на аудит</Button>
-          </ButtonWrapper>
-        </Background>
+        <ButtonWrapper>
+          <Button onClick={this.handleClick}>Оставить заявку на аудит</Button>
+        </ButtonWrapper>
       </Wrapper>
     </div>
   }

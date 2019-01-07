@@ -12,20 +12,17 @@ const CheckListFormWrapper = styled.div`
   margin: 0 auto;
   max-width: 768px;
   text-align: center;
-  padding: 40px 0;
+  padding: 100px 0;
 `;
 
 const Form = styled.form`
   display: flex;
   justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
   margin: 0 auto;
   padding: 20px 0;
   max-width: 600px;
-  
-  @media(max-width: 768px) {
-    flex-direction: column;
-  }
 `;
 
 const Button = styled(StyledButton)`
@@ -43,9 +40,14 @@ const Input = styled(StyledInput)`
   margin-bottom: 15px;
   
   @media(min-width: 768px) {
-    margin-bottom: 0;
     flex-direction: row;
   }
+`;
+
+const Text = styled.div`
+    // padding: 10px 0;
+    font-size: 18px;  
+    color: #fff;
 `;
 
 export default class extends Component {
@@ -53,9 +55,11 @@ export default class extends Component {
     return <Wrapper>
       <CheckListFormWrapper>
         <H2>
-          <b>Оставьте свой Email<br /></b>
-          Мы отправим бесплатный чек-лист по оптимизации вашего сайта
+          Оставьте свой Email
         </H2>
+        <Text>
+          Мы отправим бесплатный чек-лист по оптимизации вашего сайта
+        </Text>
         <Form>
           <Input placeholder="Ваш email" />
           <Button>Получить чек-лист</Button>

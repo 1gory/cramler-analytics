@@ -4,27 +4,35 @@ import H2 from '../Elements/H2';
 import Br from '../Elements/Br';
 import StyledButton from './../Elements/CtaButton';
 import StyledInput from './../Elements/Input';
+import bg from './bg.jpg';
 
 const Wrapper = styled.div`
-  background-color: lightyellow;
+  background-color: #4a4a4a;
+  padding: 120px 0;
+  background-image: url(${bg});
+  background-size: cover;
+  // background-position: 0 -170px;
+  
+  @media(max-width: 768px) {
+    padding: 60px 20px;
+  }
+`;
+
+const FormWrapper = styled.div`
+  color: #fff;
   max-width: 768px;
   margin: 0 auto;
   text-align: center;
-  padding: 40px 0;
-  
-  @media(max-width: 768px) {
-    padding: 0 20px;
-  }
 `;
 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  padding-top: 30px;
 `;
 
 const Offer = styled.div`
   font-size: 24px;
+  padding-bottom: 30px;
 `;
 
 const OfferText = styled.div``;
@@ -35,11 +43,12 @@ const RubleSign = styled.span`
   font-weight: lighter;
 `;
 
-const FormWrapper = styled.div`
+const OfferWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-
+  padding-top: 40px;
+  
   @media(max-width: 768px) {
     flex-direction: column;
   }
@@ -56,20 +65,22 @@ const Button = styled(StyledButton)`
 export default class extends Component {
   render(){
     return <Wrapper>
-      <H2>
-        В одном отчете мы соберем все проблемы вашего сайта, <Br />
-        исправив которые, вы повысите конверсию
-      </H2>
       <FormWrapper>
-        <Offer>
-          <OfferText>Комплексный адуит сайта</OfferText>
-          <Price>4900<RubleSign>₽</RubleSign></Price>
-        </Offer>
-        <Form>
-          <Input placeholder="Ваш телефон"/>
-          <Input placeholder="Адрес вашего сайта"/>
-          <Button>Оставить заявку</Button>
-        </Form>
+        <H2>
+          В одном отчете мы соберем все проблемы вашего сайта, <Br />
+          исправив которые, вы повысите конверсию
+        </H2>
+        <OfferWrapper>
+          <Offer>
+            <OfferText>Комплексный адуит сайта</OfferText>
+            <Price>4900<RubleSign>₽</RubleSign></Price>
+          </Offer>
+          <Form>
+            <Input placeholder="Ваш телефон"/>
+            <Input placeholder="Адрес вашего сайта"/>
+            <Button>Оставить заявку</Button>
+          </Form>
+        </OfferWrapper>
       </FormWrapper>
     </Wrapper>;
   }
