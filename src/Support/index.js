@@ -32,8 +32,8 @@ const SupportSection = styled.div`
   color: #fff;
   position: absolute;
   left: 0;
-  right: 0;
-  top: 100px;
+  right: 0;    
+  top: 90px;
   margin: 0 auto;
 `;
 

@@ -12,7 +12,12 @@ const CheckListFormWrapper = styled.div`
   margin: 0 auto;
   max-width: 768px;
   text-align: center;
-  padding: 100px 0;
+  padding: 80px 0;
+  
+    
+  @media(min-width: 768px) {
+    padding: 100px 0;
+  }
 `;
 
 const Form = styled.form`

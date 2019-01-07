@@ -7,6 +7,18 @@ import bg from './bg.jpg';
 import bgMin from './bg-min.jpg';
 import Button from './../Elements/CtaButton';
 
+const Wrapper = styled.div`
+  background: #FFF;
+  background-size: cover;
+  background-image: url(${bgMin});
+  padding: 60px 20px;
+  
+  @media (min-width: 768px) {
+    padding: 120px 0;
+    background-image: url(${bg});  
+  }
+`;
+
 const Offer = styled.span`
   color: #fff;
   padding: 0;
@@ -32,20 +44,9 @@ const SubOfferText = styled(Offer)`
   }
 `;
 
-const Wrapper = styled.div`
-  background: #FFF;
-  background-size: cover;
-  background-image: url(${bgMin});
-  padding: 60px 0;
-  
-  @media (min-width: 768px) {
-    padding: 120px 0;
-    background-image: url(${bg});  
-  }
-`;
-
 const ButtonWrapper = styled.div`
   margin: 0 auto;
+  text-align: center;
   width: 320px;
   padding-top: 30px;
   
