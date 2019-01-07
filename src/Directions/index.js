@@ -26,6 +26,7 @@ const SectionBlock = styled.div`
 
 const SectionHeader = styled(H3)`
   text-align: center;
+  margin: 26px 0;
 `;
 
 const DetailsButton = styled.span`

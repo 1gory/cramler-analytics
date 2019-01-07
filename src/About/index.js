@@ -23,10 +23,6 @@ const TextAbout = styled.p`
   font-size: 16px;
 `;
 
-const Bold = styled.span`
-  font-weight: bolder;
-`;
-
 export default ({handleScroll}) => (
   <div>
     <AboutAnchor name="AboutAnchor"/>
@@ -34,7 +30,7 @@ export default ({handleScroll}) => (
       <Waypoint onEnter={handleScroll}/>
       <Header>О компании</Header>
       <TextAbout>
-        <Bold>Cramler</Bold> - аналитическое агенство. <Br />
+        Cramler - аналитическое агенство. <Br />
         Мы занимаемся анализом сайтов для поиска проблемных мест, которые
         мешают посетителям совершать целевые действия, а владельцам получать прибыль.
       </TextAbout>
