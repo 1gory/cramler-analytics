@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
+import Scroll from 'react-scroll';
 import H2 from './../Elements/H2';
 import H1 from './../Elements/H1';
 import Br from './../Elements/Br';
 import bg from './bg.jpg';
 import bgMin from './bg-min.jpg';
 import Button from './../Elements/CtaButton';
+
+const scroller = Scroll.scroller;
 
 const Wrapper = styled.div`
   background: #FFF;
@@ -70,22 +73,11 @@ export default class extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(formData) {
-    fetch('/api/order', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      credentials: 'include',
-      body: JSON.stringify(formData),
-    }).then(async (data) => {
-      this.props.handleOpen();
-      const response = await data.json();
-    }).catch((/* error */) => {
-      // this.setState({
-      //   fileFormStatus: ERROR_FORM_STATUS,
-      // });
+  handleClick() {
+    scroller.scrollTo('FormAnchor', {
+      duration: 800,
+      delay: 100,
+      smooth: true,
     });
   }
 

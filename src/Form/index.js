@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Scroll from 'react-scroll';
 import H2 from '../Elements/H2';
 import Br from '../Elements/Br';
 import StyledButton from './../Elements/CtaButton';
 import StyledInput from './../Elements/Input';
 import bg from './bg.jpg';
+
+// const FormAnchor = Scroll.Element;
 
 const Wrapper = styled.div`
   background-color: #4a4a4a;
@@ -64,24 +67,26 @@ const Button = styled(StyledButton)`
 
 export default class extends Component {
   render(){
-    return <Wrapper>
-      <FormWrapper>
-        <H2>
-          В одном отчете мы соберем все проблемы вашего сайта, <Br />
-          исправив которые, вы повысите конверсию
-        </H2>
-        <OfferWrapper>
-          <Offer>
-            <OfferText>Комплексный адуит сайта</OfferText>
-            <Price>4900<RubleSign>₽</RubleSign></Price>
-          </Offer>
-          <Form>
-            <Input placeholder="Ваш телефон"/>
-            <Input placeholder="Адрес вашего сайта"/>
-            <Button>Оставить заявку</Button>
-          </Form>
-        </OfferWrapper>
-      </FormWrapper>
-    </Wrapper>;
+    return <div>
+      <Wrapper>
+        <FormWrapper>
+          <H2>
+            В одном отчете мы соберем все проблемы вашего сайта, <Br />
+            исправив которые, вы повысите конверсию
+          </H2>
+          <OfferWrapper>
+            <Offer>
+              <OfferText>Комплексный адуит сайта</OfferText>
+              <Price>4900<RubleSign>₽</RubleSign></Price>
+            </Offer>
+            <Form>
+              <Input placeholder="Ваш телефон"/>
+              <Input placeholder="Адрес вашего сайта"/>
+              <Button>Оставить заявку</Button>
+            </Form>
+          </OfferWrapper>
+        </FormWrapper>
+      </Wrapper>;
+    </div>
   }
 }

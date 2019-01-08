@@ -1,9 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import Scroll from 'react-scroll';
 import H3 from '../Elements/H3';
 import diamond from './diamond.svg';
 import usability from './usability.svg';
 import analysis from './analysis.svg';
+
+const FormAnchor = Scroll.Element;
 
 const Wrapper = styled.div`
   padding-bottom: 120px;
@@ -109,7 +112,7 @@ export default () => (
       img={diamond}
       problems={[
         "Пользователи сомневаются в ваших компетенциях",
-        "Вы не доносите до пользователей выгоды, которые они получат, если выберут именно вас",
+        "Вы не доносите до посетителей выгоды, которые они получат, если выберут именно вас",
         "Не закрываете возражения клиентов"
       ]}/>
     <Section
@@ -130,5 +133,6 @@ export default () => (
         "Неправильно настроены sitemap.xml, robots.txt, ssl-сертификаты и многое другое",
         "Неправильная структура сайта с точки зрения seo"
       ]}/>
+    <FormAnchor name="FormAnchor" />
   </Wrapper>
 );
