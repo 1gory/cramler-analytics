@@ -3,11 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import modalClose from './modal-close.svg';
-// import ReactGA from 'react-ga';
-// import ReactPixel from 'react-facebook-pixel';
-// import ym from 'react-yandex-metrika';
-// import moment from 'moment';
-// import Form from './Details';
+import CtaButton from '../Elements/CtaButton';
 
 const WrapperH3 = styled.div`
   display: flex;
@@ -50,20 +46,28 @@ const StyledImg = styled.img`
   width: 13px;
   height: 13px;
   padding-top: 5px;
+  cursor: pointer;
 `;
 
 const Text = styled.p`
   
 `;
 
+const Button = styled(CtaButton)`
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+`;
+
 export default props => (
   <Wrapper isOpened={props.isOpened}>
     <Popup>
       <WrapperH3>
-        <H3>Спасибо, заявка принята!</H3>
-        <StyledImg onClick={props.handleClose} src={modalClose} />
+        <H3>{props.type.header}</H3>
+        <StyledImg src={modalClose} onClick={props.handleClose} />
       </WrapperH3>
-      <Text>Перезвоним вам через 5 минут!</Text>
+      <Text>{props.type.text}</Text>
+      <Button onClick={props.handleClose}>Ок</Button>
     </Popup>
   </Wrapper>
 );

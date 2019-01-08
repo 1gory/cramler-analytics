@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import Scroll from 'react-scroll';
 import vkIcon from '../Social/contact-social-vk.svg';
 import telegramIcon from '../Social/contact-social-telegram.svg';
-import instagramIcon from '../Social/contact-social-insta.svg';
-import youtubeIcon from '../Social/contact-social-youtube.svg';
 import visa from '../Payments/visa.svg';
 import maestro from '../Payments/maestro.svg';
 import mastecard from '../Payments/mastercard.svg';
@@ -57,7 +55,7 @@ const SocialNetworksIcons = styled.div`
 const FooterMenu = styled.div`
   padding: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   
   @media (min-width: 768px) {
     display: inline-block;
@@ -114,7 +112,7 @@ export default () => (
     </MenuWrapper>
 
     <Requisites>
-      Индивидуальный предприниматель Першин И. В.<br />
+      Индивидуальный предприниматель Першин И. Валерьевич<br />
       ОГРНИП 318774600098068<br />
       ИНН 771386120991<br />
       Банк МОСКОВСКИЙ ФИЛИАЛ АО КБ "МОДУЛЬБАНК"<br />
@@ -124,12 +122,6 @@ export default () => (
       <a href="https://vk.com/id14662245" target="_blank">
         <Icon src={vkIcon} alt="cramler vkontakte" onClick={() => (ym(51779426, 'reachGoal', 'vk'))} />
       </a>
-      {/*<a href="https://instagram.com/casp_lase/" target="_blank">*/}
-        {/*<Icon src={instagramIcon} alt="instagram" onClick={() => (yaCounter48967208.reachGoal('instagram'))} />*/}
-      {/*</a>*/}
-      {/*<a href="https://www.youtube.com/channel/UC2-rv4pDPmTUdjvl5GUBJsA" target="_blank">*/}
-        {/*<Icon src={youtubeIcon} alt="YouTube" onClick={() => (yaCounter48967208.reachGoal('youtube'))} />*/}
-      {/*</a>*/}
       <a href="tg://resolve?domain=igoryp" target="_blank">
         <Icon src={telegramIcon} alt="cramler telegram" onClick={() => (ym(51779426, 'reachGoal', 'telegram'))} />
       </a>

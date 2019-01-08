@@ -14,6 +14,7 @@ import Checklist from './Checklist';
 import About from './About';
 import Footer from './Footer';
 import OrderPopUp from './OrderPopUp';
+import PopUpType from './OrderPopUp/Type';
 
 const Wrapper = styled.div`
   
@@ -24,10 +25,15 @@ export default class extends Component {
     super(props);
 
     this.state = {
+      popUptype: 'order',
       mapPreloader: true,
+      isOpened: false,
     };
 
     this.handleWaypointEnter = this.handleWaypointEnter.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+    this.handleOpen = this.handleOpen.bind(this);
+    this.handlechangePopUp = this.handlechangePopUp.bind(this);
   }
 
   handleWaypointEnter() {
@@ -36,19 +42,37 @@ export default class extends Component {
     });
   }
 
+  handleClose(){
+    this.setState({
+      isOpened: false,
+    });
+  }
+
+  handleOpen(){
+    this.setState({
+      isOpened: true,
+    });
+  }
+
+  handlechangePopUp(type){
+    this.setState({
+      popUptype: type,
+    });
+  }
+
   render() {
     return <Wrapper>
-      <OrderPopUp />
+      <OrderPopUp type={PopUpType[this.state.popUptype]} isOpened={this.state.isOpened} handleClose={this.handleClose} />
       <Header />
       <Hero />
       <Reasons />
       <DirectionsHeader />
       <Directions />
-      <Form />
+      <Form handlechangePopUp={this.handlechangePopUp} handleOpen={this.handleOpen} />
       <Care />
       <Support />
       <Payment />
-      <Checklist />
+      <Checklist handlechangePopUp={this.handlechangePopUp} handleOpen={this.handleOpen} />
       <About handleScroll={this.handleWaypointEnter} />
       <Footer mapPreloader={this.state.mapPreloader} />
     </Wrapper>

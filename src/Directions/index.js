@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Scroll from 'react-scroll';
-import H3 from '../Elements/H3';
 import diamond from './diamond.svg';
 import usability from './usability.svg';
 import analysis from './analysis.svg';
+import Section from './Section';
 
 const FormAnchor = Scroll.Element;
 
@@ -17,93 +17,6 @@ const Wrapper = styled.div`
   }
 `;
 
-const SectionWrapper = styled.div`
-  background-color: ${({background}) => (background ? background : 'gray')};
-  padding: 50px 20px;
-`;
-
-const SectionBlock = styled.div`
-  max-width: 768px;
-  margin: 0 auto;
-`;
-
-const SectionHeader = styled(H3)`
-  text-align: center;
-  margin: 26px 0;
-`;
-
-const DetailsButton = styled.span`
-  color: garkgray;
-  text-decoration: underline;
-  text-align: center;
-  display: block;
-  cursor: pointer;
-`;
-
-const Ul = styled.ul`
-  max-width: 530px;
-`;
-
-const Li = styled.li`
-  list-style-type: circle;
-  padding-bottom: 10px;
-`;
-
-const ProblemsText = styled.span`
-  font-size: 14px;
-  margin-left: 20px;
-`;
-
-const Img = styled.img`
-  width: 100px;
-  display: block;
-  
-  @media(max-width: 768px) {
-    display: none;
-  }
-`;
-
-const MinImg = styled.img`
-  width: 40px;
-  display: none;
-  
-  @media(max-width: 768px) {
-    display: block;
-    margin: 0 auto;
-  }
-`;
-
-const ImgWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-`;
-
-const Section = ({problems, background, sectionHeader, img}) => (
-  <SectionWrapper background={background}>
-    <SectionBlock>
-      <MinImg src={img} />
-      <SectionHeader>
-        {sectionHeader}
-      </SectionHeader>
-      <ProblemsText>Проблемы:</ProblemsText>
-      <ImgWrapper>
-        <div>
-          <Ul>
-            {problems.map((problem, i) => (
-              <Li key={i}>
-                {problem}
-              </Li>)
-            )}
-          </Ul>
-          <DetailsButton>подробнее</DetailsButton>
-        </div>
-        <Img src={img} />
-      </ImgWrapper>
-    </SectionBlock>
-  </SectionWrapper>
-);
-
 export default () => (
   <Wrapper>
     <Section
@@ -114,7 +27,13 @@ export default () => (
         "Пользователи сомневаются в ваших компетенциях",
         "Вы не доносите до посетителей выгоды, которые они получат, если выберут именно вас",
         "Не закрываете возражения клиентов"
-      ]}/>
+      ]}
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    />
     <Section
       sectionHeader="2. Юзабилити и конверсия"
       background="#f0f0f0"
@@ -123,7 +42,13 @@ export default () => (
         "Сложно сделать первый шаг к покупке",
         "Неудобно расположены элементы интерфейса и CTA (call to action)",
         "Перегруженный интерфейс или отсутвие нужных элементов"
-      ]}/>
+      ]}
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    />
     <Section
       sectionHeader="3. Технический анализ и seo-аудит"
       background="#f9f9f9"
@@ -132,7 +57,13 @@ export default () => (
         "Медленная загрузка, неоптимизированные изображения",
         "Неправильно настроены sitemap.xml, robots.txt, ssl-сертификаты и многое другое",
         "Неправильная структура сайта с точки зрения seo"
-      ]}/>
-    <FormAnchor name="FormAnchor" />
+      ]}
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    />
+    <FormAnchor name="FormAnchor"/>
   </Wrapper>
 );

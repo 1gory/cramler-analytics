@@ -16,7 +16,6 @@ export default styled.button`
   }
   
   @media (min-width: 768px) {
-    background-color:#08b56d;
     padding: 10px 40px;
     font-size: 20px;
   }

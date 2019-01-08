@@ -5,12 +5,13 @@ const router = express.Router();
 
 router.post('/order', async (req, res, next) => {
   try {
-    const ip = req.headers['x-forwarded-for'];
+    // const ip = req.headers['x-forwarded-for'];
     const phone = req.body.phone;
     const comment = req.body.comment;
-    const filePath = req.body.filePath ? `nagravirovku.ru/${req.body.filePath}` : '';
+    const email = req.body.email;
+    const formName = req.body.formName;
 
-    mailer('CASPLASE.RU Заявка', { phone, comment, filePath});
+    mailer(`${formName} cramler.ru`, { phone, comment, email});
 
     res.json({
       status: 'success',

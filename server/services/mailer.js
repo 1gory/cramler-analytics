@@ -19,9 +19,9 @@ export default (mailType, data) => {
   });
 
   let output = '';
-  output += `Телефон: ${data.phone} <br>`;
-  output += `Комментарий: ${data.comment} <br>`;
-  output += data.filePath ? `Файл: ${data.filePath} <br>` : '';
+  output += data.phone ? `Телефон: ${data.phone} <br>` : '';
+  output += data.comment ? `Комментарий: ${data.comment} <br>` : '';
+  output += data.email ? `Email: ${data.email} <br>` : '';
 
   const mailOptions = {
     from: config.production.notificationMail,

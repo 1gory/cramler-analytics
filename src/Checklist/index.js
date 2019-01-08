@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
 import StyledH2 from '../Elements/H2';
 import StyledButton from '../Elements/CtaButton';
@@ -27,6 +27,7 @@ const Form = styled.form`
   align-items: center;
   margin: 0 auto;
   padding: 20px 0;
+  padding-top: 40px;
   max-width: 600px;
 `;
 
@@ -50,12 +51,48 @@ const Input = styled(StyledInput)`
 `;
 
 const Text = styled.div`
-    // padding: 10px 0;
     font-size: 18px;  
     color: #fff;
 `;
 
 export default class extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      formName: 'Checklist',
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSend = this.handleSend.bind(this);
+  }
+
+  handleChange(e) {
+    const state = {};
+    state[e.target.name] = e.target.value;
+    this.setState(state);
+  }
+
+  handleSend(formData){
+    this.props.handlechangePopUp('checklist');
+    ym(51779426, 'reachGoal', 'checklist');
+    fetch('/api/order', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      credentials: 'include',
+      body: JSON.stringify(formData),
+    }).then(async (data) => {
+      this.props.handleOpen();
+      const response = await data.json();
+      console.log(response);
+    }).catch((error) => {
+      console.log(error);
+    });
+  }
+
   render() {
     return <Wrapper>
       <CheckListFormWrapper>
@@ -66,8 +103,8 @@ export default class extends Component {
           Мы отправим бесплатный чек-лист по оптимизации вашего сайта
         </Text>
         <Form>
-          <Input placeholder="Ваш email" />
-          <Button>Получить чек-лист</Button>
+          <Input name="email" placeholder="Ваш email" onChange={this.handleChange} />
+          <Button onClick={(event)=>{event.preventDefault(); this.handleSend(this.state)}} >Получить чек-лист</Button>
         </Form>
       </CheckListFormWrapper>
     </Wrapper>
