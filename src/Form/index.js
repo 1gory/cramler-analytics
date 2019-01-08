@@ -115,7 +115,7 @@ export default class extends Component {
           </H2>
           <OfferWrapper>
             <Offer>
-              <OfferText>Комплексный адуит сайта</OfferText>
+              <OfferText>Комплексный аудит сайта</OfferText>
               <Price>4900<RubleSign>₽</RubleSign></Price>
             </Offer>
             <Form>

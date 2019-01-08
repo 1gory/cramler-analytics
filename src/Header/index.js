@@ -44,7 +44,7 @@ const Menu = styled.div`
 const LogoWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: normal;
+  align-items: flex-end;
   padding: 3px 0;
   
   @media(min-width: 768px) {

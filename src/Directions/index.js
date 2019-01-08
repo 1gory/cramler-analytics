@@ -41,7 +41,7 @@ export default () => (
       problems={[
         "Сложно сделать первый шаг к покупке",
         "Неудобно расположены элементы интерфейса и CTA (call to action)",
-        "Перегруженный интерфейс или отсутвие нужных элементов"
+        "Перегруженный интерфейс или отсутствие нужных элементов"
       ]}
       text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
       ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
