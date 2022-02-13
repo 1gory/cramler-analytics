@@ -51,7 +51,6 @@
     "start:server": "NODE_ENV=production babel-node server/index.js",
     "start:devserver": "babel-node server/index.js",
     "start:dev": "node_modules/.bin/webpack-dev-server --mode development",
-    "build": "node_modules/.bin/webpack -p",
-//    "lint": "eslint src --ext=js,jsx"
+    "build": "node_modules/.bin/webpack -p"
   }
 }
