@@ -2,8 +2,8 @@ import React from 'react';
 import Waypoint from 'react-waypoint';
 import styled from 'styled-components';
 import Scroll from 'react-scroll';
-import H2 from './../Elements/H2';
-import Br from './../Elements/Br';
+import H2 from '../Elements/H2';
+import Br from '../Elements/Br';
 
 const AboutAnchor = Scroll.Element;
 
@@ -23,7 +23,7 @@ const TextAbout = styled.p`
   font-size: 16px;
 `;
 
-export default ({handleScroll}) => (
+export default ({ handleScroll }) => (
   <div>
     <AboutAnchor name="AboutAnchor"/>
     <Wrapper>

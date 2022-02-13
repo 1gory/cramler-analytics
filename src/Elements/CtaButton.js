@@ -5,9 +5,9 @@ export default styled.button`
   padding: 10px 30px;
   color:#ffffff;
   border: none;
-  border-radius: 24px;
-  font-size: 18px;
-  font-family: 'Roboto',sans-serif;
+  border-radius: 30px;
+  font-size: 36px;
+  font-family: 'Roboto-Light',sans-serif;
   cursor: pointer;
   background-color:#08b56d;
   
@@ -16,7 +16,7 @@ export default styled.button`
   }
   
   @media (min-width: 768px) {
-    padding: 10px 40px;
+    padding: 15px 45px;
     font-size: 20px;
   }
 `;

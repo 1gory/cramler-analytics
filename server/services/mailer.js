@@ -3,15 +3,9 @@ import { config } from '../config';
 
 export default (mailType, data) => {
   const transporter = nodemailer.createTransport({
-    service: 'Gmail',
-    pool: true,
+    port: 465,
+    secure: true,
     host: 'smtp.gmail.com',
-    ignoreTLS: true,
-    tls: {
-      rejectUnauthorized: false,
-    },
-    port: 587,
-    secure: false,
     auth: {
       user: config.production.notificationMail,
       pass: config.production.notificationPass,

@@ -123,7 +123,7 @@ export default () => (
           <Link to="/"><Logo src={logo}/></Link>
           <HeaderWrapper>
             <Descriptor>
-              Аналитика и аудит сайтов
+              Разработка telegram-ботов
             </Descriptor>
           </HeaderWrapper>
         </LogoWrapper>

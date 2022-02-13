@@ -7,6 +7,7 @@ import Br from './../Elements/Br';
 import bg from './bg.jpg';
 import bgMin from './bg-min.jpg';
 import Button from './../Elements/CtaButton';
+import telegramIcon from "../Footer/Social/contact-social-telegram.svg";
 
 const scroller = Scroll.scroller;
 
@@ -14,6 +15,9 @@ const Wrapper = styled.div`
   background: #FFF;
   background-size: cover;
   background-image: url(${bgMin});
+  
+  height: 100%;
+  
   padding: 60px 20px;
   
   @media (min-width: 768px) {
@@ -39,10 +43,10 @@ const OfferText = styled(Offer)`
 
 const SubOfferText = styled(Offer)`
   font-weight: lighter;
-  font-size: 18px;
+  font-size: 35px;
   
   @media (min-width: 768px) {
-    font-size: 22px;  
+    font-size: 35px;  
   }
 `;
 
@@ -85,14 +89,16 @@ export default class extends Component {
     return <div>
       <Wrapper>
         <OfferText as={H1}>
-          Проведем аудит вашего сайта / лендинга <Br />более чем по 100 факторам за 4 дня
+          Разработка telegram-ботов. <br />Серверные решения любой сложности
         </OfferText>
         <SubOfferText as={H2}>
-          Найдем ошибки в навигации и интерфейсах, <Br />
-          мешающие посетителям увеличивать вашу прибыль
+          Реализация любых интеграций с ботом <br />
+          (Google Sheets, Google Calendar, AmoСRM и прочеe)
         </SubOfferText>
         <ButtonWrapper>
-          <Button onClick={this.handleClick}>Оставить заявку на аудит</Button>
+          <a href="tg://resolve?domain=igoryp" onClick={() => (ym(51779426, 'reachGoal', 'telegram'))} target="_blank">
+            <Button>Связаться</Button>
+          </a>
         </ButtonWrapper>
       </Wrapper>
     </div>
